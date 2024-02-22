@@ -1,5 +1,6 @@
 import NavItems from '@/components/NavItems'
 import React from 'react'
+import navListData from '../../data/NavListData'
 import './Navbar.scss'
 
 const Navbar = () => {
@@ -7,8 +8,13 @@ const Navbar = () => {
     <header className='Navbar'>
         <a href="" className='logo'>CINEFY</a>
         <ul className="nav">
-            <NavItems name="Home"/>
-            <NavItems name="Home"/>
+
+            {
+                navListData.map(nav=>(
+                    <NavItems key={nav._id} nav={nav} />
+                ))
+            }
+    
         </ul>
     </header>
   )

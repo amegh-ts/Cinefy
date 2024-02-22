@@ -1,8 +1,25 @@
 const navListData = [
     {
-        id:1,
+        _id:1,
         link:'#',
-        name:'home',
+        name:`home`,
         active:true,
+    },{
+        _id:2,
+        link:'#schedule',
+        name:`schedule`,
+        active:false,
+    },{
+        _id:3,
+        link:'#trend',
+        name:`trend`,
+        active:false,
+    },{
+        _id:4,
+        link:'#blog',
+        name:`blog`,
+        active:false,
     },
 ]
+
+export default navListData
