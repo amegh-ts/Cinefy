@@ -1,11 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  scroll-behavior: smooth;
+
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #ff3700;
+  --text: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,17 +21,23 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --primary: #ff3700;
+    --text: #ffffff;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  /* background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb)); */
+      
+
+  font-family: "Roboto", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @layer utilities {
@@ -31,3 +45,4 @@ body {
     text-wrap: balance;
   }
 }
+

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
+
+.Hero {
+    position: relative;
+    width: 100%;
+    min-height: 100lvh;
+    padding: 0 100px;
+    overflow: hidden;
+    transition: 0.5s;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .movie {
+        padding: 0 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100lvh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        padding-bottom: 100px;
+
+        .bgImg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            font-size: 8rem;
+            visibility: hidden;
+            opacity: 0;
+            transition: 1s;
+
+
+        }
+
+        .bgImg.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .container-fluid {
+            .row {
+                .content {
+                    position: relative;
+                    max-width: 550px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: 1s;
+                    z-index: 1000;
+
+                    .movie-title {
+                        max-width: 250px;
+                        margin-bottom: 20px;
+                    }
+
+                    h4 {
+                        color: rgba(255, 255, 2555, 0.6);
+                        font-weight: 300;
+                        font-size: 30px;
+
+                        span {
+                            padding: 0 10px;
+                            border-right: 1px solid white;
+
+                            &:first-child {
+                                padding-left: 0;
+                            }
+
+                            &:last-child {
+                                border-right: 0;
+                            }
+
+                            i {
+                                background-color: var(--primary);
+                                padding: 0 8px;
+                                display: inline-block;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+
+                    p {
+                        color: rgba(255, 255, 255, 0.8);
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5rem;
+                        margin: 20px 0 30px;
+                    }
+
+                    .button {
+
+                        .mainBtn {
+                            position: relative;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-right: 15px;
+                            background: var(--primary);
+                            color: white;
+                            padding: 5px 16px;
+                            text-decoration: none;
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            border: none;
+
+                            &:hover{
+                                color: var(--primary);
+                                background: white ;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .content.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+
+                }
+
+                .date {
+                    position: relative;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: 1s;
+                    z-index: 1000;
+
+                    h2 {
+                        font-family: "Racing Sans One", cursive;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        font-size: 7rem;
+                        text-align: center;
+                        margin-bottom: 20px;
+                        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+                        -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);
+                        -webkit-mask-clip: text, padding-box;
+                        -webkit-mask-composite: xor;
+                    }
+                }
+
+                .date.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+
+                }
+
+                .trailer {
+                    position: relative;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(0);
+                    z-index: 1000;
+
+                    .playBtn {
+                        position: relative;
+                        color: white;
+                        width: 80px;
+                        height: 80px;
+                        transition: 1s;
+                        z-index: 1000;
+                        background: transparent;
+                        backdrop-filter: blur(20px);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &::before {
+                            position: absolute;
+                            top: -5px;
+                            left: -5px;
+                            bottom: -5px;
+                            right: -5px;
+                            content: '';
+                            background: transparent;
+                            border: 10px solid white;
+                            border-radius: 50%;
+                            animation: button 1s linear infinite;
+                        }
+
+                        @keyframes button {
+
+                            0%,
+                            100% {
+                                opacity: 0.3;
+                                filter: blur(4px);
+                            }
+
+                            50% {
+                                opacity: 1;
+                                filter: blur(10px);
+                            }
+                        }
+
+                        .play-icon {
+                            font-size: 4rem;
+                            color: var(--primary);
+                            cursor: pointer;
+                        }
+                    }
+
+                    p {
+                        color: var(--primary);
+                        font-size: 1.5rem;
+                        margin-left: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                .trailer.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1);
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 100px;
+    transition: 0.5s;
+    z-index: 10000;
+
+    .logo {
+        font-size: 35px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .nav {
+        display: flex;
+
+        li {
+            list-style: none;
+
+            margin: 0 20px;
+
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                cursor: pointer;
+                transition: 0.3s;
+                color: white;
+
+
+                &:hover {
+                    color: var(--primary);
+                }
+
+
+            }
+
+            a.active {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .Search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 40px;
+        color: white;
+
+
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 2555, 0.5);
+            outline: none;
+            border-radius: 4px;
+            padding: 0 10px 0 45px;
+            backdrop-filter: blur(10px);
+
+            &::placeholder {
+                color: var(--text);
+            }
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            padding-right: 10px;
+            border-right: 1px solid var(--text);
+            font-size: 26px;
+        }
+    }
+
+    .mainBtn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 15px;
+        background: var(--primary);
+        color: white;
+        padding: 5px 16px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.3s;
+        cursor: pointer;
+        border: none;
+
+        &:hover{
+            color: var(--primary);
+            background: white ;
+            cursor: pointer;
+        }
+    }
+}
