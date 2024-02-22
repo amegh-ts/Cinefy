@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
         <div className='Hero'>
             {
                 movies && movies.length > 0 && movies.map(movie => (
-                    <div className="movie">
+                    <div className="movie" key={movie._id}>
                         <img src={movie.bgImg} alt="Background Image" className={`bgImg ${movie.active?'active':undefined}`} />
                         <div className="container-fluid">
                             <div className="row">
