@@ -30,7 +30,7 @@ const Hero = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 col-mid-12">
-                            <div className="content">
+                            <div className="content active">
                                 <img src="Movie Title" alt="" className="movie-title" />
                                 <h4>
                                     <span>Year</span>
@@ -45,7 +45,9 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 col-mid-12">
-
+                            <div className="date">
+                                <h2>on 15th august</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
