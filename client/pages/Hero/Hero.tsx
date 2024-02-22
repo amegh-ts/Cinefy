@@ -21,6 +21,7 @@ interface Movie {
     date:string;
     video:string;
     title:string;
+    previewImg: string; 
 }
 
 const Hero: React.FC = () => {
