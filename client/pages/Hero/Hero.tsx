@@ -8,9 +8,24 @@ import MovieDate from '@/components/MovieDate';
 import MovieTrailer from '@/components/MovieTrailer';
 import MovieSwiper from '@/components/MovieSwiper';
 
+interface Movie {
+    _id: string;
+    bgImg: string;
+    active: boolean;
+    titleImg: string;
+    year: string;
+    ageLimit: string;
+    length: string;
+    category: string;
+    description: string;
+    date:string;
+    video:string;
+    title:string;
+}
 
-const Hero = () => {
-    const [movies, setMovies] = useState([])
+const Hero: React.FC = () => {
+    const [movies, setMovies] = useState<Movie[]>([]);
+
 
     useEffect(() => {
         async function fetchMovieData() {
@@ -25,7 +40,7 @@ const Hero = () => {
         fetchMovieData();
     }, []);
 
-    const handleSlideChange = id => {
+    const handleSlideChange = (id: string) => {
         console.log(id);
         const newMovies=movies.map(movie=>{
             movie.active=false;
