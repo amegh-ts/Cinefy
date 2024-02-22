@@ -2,7 +2,21 @@ import React from 'react'
 import Button from './Button'
 import { IoBookmarkOutline, IoAddOutline } from "react-icons/io5";
 
-const MovieContent = ({ movie }) => {
+interface Movie {
+    titleImg: string;
+    year: string;
+    ageLimit: string;
+    length: string;
+    category: string;
+    description: string;
+    active?: boolean; // optional
+}
+
+interface MovieContentProps {
+    movie: Movie;
+}
+
+const MovieContent: React.FC<MovieContentProps> = ({ movie }) => {
     return (
         <div className={`content ${movie.active ? 'active' : undefined}`}>
             <img src={movie.titleImg} alt="Movie Title" className="movie-title" />
