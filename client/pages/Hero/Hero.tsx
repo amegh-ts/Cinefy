@@ -25,7 +25,12 @@ const Hero = () => {
         fetchMovieData();
     }, []);
 
-    console.log(movies);
+    const handleSlideChange=id=>{
+        console.log(id);
+        
+    }
+
+    // console.log(movies);
 
 
     return (
@@ -45,7 +50,7 @@ const Hero = () => {
                 </div>
             </div>
             {
-                movies && movies.length > 0 && <MovieSwiper />
+                movies && movies.length > 0 && <MovieSwiper slides={movies} slideChange={handleSlideChange}/>
             }
 
         </div>
