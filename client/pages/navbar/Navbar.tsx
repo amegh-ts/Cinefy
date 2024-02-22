@@ -1,6 +1,6 @@
 import NavItems from '@/components/NavItems'
 import React from 'react'
-import navListData from '../../data/NavListData'
+import navListData from '../../data/navListData'
 import './Navbar.scss'
 import Search from '@/components/Search'
 import Button from '@/components/Button'
