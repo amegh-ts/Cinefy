@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from 'react'
 import './Hero.scss'
 import axios from 'axios';
+import { IoPlayOutline } from "react-icons/io5";
+
 
 const Hero = () => {
     const [movies, setMovies] = useState([])
@@ -31,7 +33,7 @@ const Hero = () => {
                     <div className="row">
                         <div className="col-lg-6 col-mid-12">
                             <div className="content active">
-                                <img src="Movie Title" alt="" className="movie-title" />
+                                <img src="/assets/movies/transformer-title.png" alt="Movie Title" className="movie-title" />
                                 <h4>
                                     <span>Year</span>
                                     <span><i>age</i></span>
@@ -45,8 +47,13 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 col-mid-12">
-                            <div className="date">
+                            <div className="date active">
                                 <h2>on 15th august</h2>
+                            </div>
+
+                            <div className="trailer">
+                                <a href="#" className="playBtn"><IoPlayOutline /></a>
+                                <p>Watch Trailer</p>
                             </div>
                         </div>
                     </div>
