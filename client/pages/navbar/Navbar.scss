@@ -36,9 +36,10 @@
                     color: var(--primary);
                 }
 
-                &:active {
-                    color: var(--primary);
-                }
+               
+            }
+            a.active {
+                color: var(--primary);
             }
         }
     }

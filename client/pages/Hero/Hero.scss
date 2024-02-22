@@ -43,6 +43,11 @@
             visibility: hidden;
             opacity: 0;
             transition: 1s;
+
+            &:active{
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 }
