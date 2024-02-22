@@ -4,20 +4,16 @@ import navListData from '../../data/NavListData'
 import './Navbar.scss'
 
 const Navbar = () => {
-  return (
-    <header className='Navbar'>
-        <a href="" className='logo'>CINEFY</a>
-        <ul className="nav">
-
-            {
-                navListData.map(nav=>(
+    return (
+        <header className='Navbar'>
+            <a href="" className='logo'>CINEFY</a>
+            <ul className="nav">
+                {navListData.map(nav => (
                     <NavItems key={nav._id} nav={nav} />
-                ))
-            }
-    
-        </ul>
-    </header>
-  )
+                ))}
+            </ul>
+        </header>
+    )
 }
 
 export default Navbar
