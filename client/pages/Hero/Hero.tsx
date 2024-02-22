@@ -6,6 +6,7 @@ import axios from 'axios';
 import MovieContent from '@/components/MovieContent';
 import MovieDate from '@/components/MovieDate';
 import MovieTrailer from '@/components/MovieTrailer';
+import MovieSwiper from '@/components/MovieSwiper';
 
 
 const Hero = () => {
@@ -43,6 +44,10 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+            {
+                movies && movies.length > 0 && <MovieSwiper />
+            }
+
         </div>
     )
 }
