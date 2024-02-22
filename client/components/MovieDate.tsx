@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MovieDate = () => {
+const MovieDate = ({movie}) => {
     return (
-        <div className="date">
-            <h2>on 15th august</h2>
+        <div className={`date ${movie.active ? 'active' : undefined}`}>
+            <h2>{movie.date}</h2>
         </div>
     )
 }
