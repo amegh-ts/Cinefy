@@ -10,7 +10,7 @@ const Hero = () => {
     useEffect(() => {
         async function fetchMovieData() {
             try {
-                const res = await axios.get('/data/movieData.json');
+                const res = await axios.get('http://localhost:3000/data/movieData.json');
                 setMovies(res.data);
             } catch (error) {
                 console.log(error);
