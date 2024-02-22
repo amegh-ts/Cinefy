@@ -12,6 +12,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #ff3700;
+  --text: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,7 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
     --primary: #ff3700;
+    --text: #ffffff;
   }
 }
 
@@ -32,7 +35,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
