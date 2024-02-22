@@ -1,0 +1,9 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .logo{
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
