@@ -2,9 +2,19 @@ import React, { useState } from 'react'
 import { IoPlayOutline } from "react-icons/io5";
 import Modal from './Modal';
 
-const MovieTrailer = ({ movie }) => {
-    const [modal,setModal]=useState(false)
-    const toggleModal=()=>{
+interface Movie {
+    active?: boolean;
+    video: string;
+    title: string;
+}
+
+interface MovieTrailerProps {
+    movie: Movie;
+}
+
+const MovieTrailer: React.FC<MovieTrailerProps> = ({ movie }) => {
+    const [modal, setModal] = useState(false)
+    const toggleModal = () => {
         setModal(!modal)
     }
 
@@ -15,7 +25,7 @@ const MovieTrailer = ({ movie }) => {
                 <p>Watch Trailer</p>
             </div>
             {
-                movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal}/>
+                movie.active && <Modal movie={movie} status={modal} toggleModal={toggleModal} />
             }
 
         </>
