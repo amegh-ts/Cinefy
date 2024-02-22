@@ -26,7 +26,7 @@ const Hero = () => {
     return (
         <div className='Hero'>
             <div className="movie">
-                <img src="" alt="Background Image" className='bgImg' />
+                <img src="/assets/movies/bg-transformer.jpg" alt="Background Image" className='bgImg' />
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 col-mid-12">
