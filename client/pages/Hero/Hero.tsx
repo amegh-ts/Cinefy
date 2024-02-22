@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import './Hero.scss'
 import axios from 'axios';
 import { IoPlayOutline } from "react-icons/io5";
+import MovieContent from '@/components/MovieContent';
 
 
 const Hero = () => {
@@ -32,27 +33,13 @@ const Hero = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-6 col-mid-12">
-                            <div className="content active">
-                                <img src="/assets/movies/transformer-title.png" alt="Movie Title" className="movie-title" />
-                                <h4>
-                                    <span>Year</span>
-                                    <span><i>age</i></span>
-                                    <span>length</span>
-                                    <span>category </span>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, atque officiis. Sint consequuntur illum sed consectetur quasi assumenda rem possimus, distinctio illo blanditiis sapiente perspiciatis exercitationem reprehenderit quisquam quam asperiores.
-                                </p>
-                                <div className="button">Button</div>
-                            </div>
+                            <MovieContent/>
                         </div>
                         <div className="col-lg-6 col-mid-12">
-                            <div className="date active">
-                                <h2>on 15th august</h2>
-                            </div>
+                            
 
-                            <div className="trailer">
-                                <a href="#" className="playBtn"><IoPlayOutline /></a>
+                            <div className="trailer d-flex align-items-center justify-content-center active">
+                                <a href="#" className="playBtn"><IoPlayOutline className='play-icon'/></a>
                                 <p>Watch Trailer</p>
                             </div>
                         </div>
