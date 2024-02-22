@@ -41,6 +41,7 @@ const Hero = () => {
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, atque officiis. Sint consequuntur illum sed consectetur quasi assumenda rem possimus, distinctio illo blanditiis sapiente perspiciatis exercitationem reprehenderit quisquam quam asperiores.
                                 </p>
+                                <div className="button">Button</div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-mid-12">
