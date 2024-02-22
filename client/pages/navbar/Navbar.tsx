@@ -3,6 +3,9 @@ import React from 'react'
 import navListData from '../../data/NavListData'
 import './Navbar.scss'
 import Search from '@/components/Search'
+import Button from '@/components/Button'
+import { IoEnterOutline } from "react-icons/io5";
+
 
 const Navbar = () => {
     return (
@@ -14,6 +17,7 @@ const Navbar = () => {
                 ))}
             </ul>
             <Search/>
+            <Button icon={<IoEnterOutline />} name="SIGN IN"/>
         </header>
     )
 }

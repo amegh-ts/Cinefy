@@ -124,6 +124,12 @@
                             transition: 0.3s;
                             cursor: pointer;
                             border: none;
+
+                            &:hover{
+                                color: var(--primary);
+                                background: white ;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }

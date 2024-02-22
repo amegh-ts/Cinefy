@@ -87,4 +87,29 @@
             font-size: 26px;
         }
     }
+
+    .mainBtn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: 15px;
+        background: var(--primary);
+        color: white;
+        padding: 5px 16px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.3s;
+        cursor: pointer;
+        border: none;
+
+        &:hover{
+            color: var(--primary);
+            background: white ;
+            cursor: pointer;
+        }
+    }
 }

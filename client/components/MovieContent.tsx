@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from './Button'
+import { IoBookmarkOutline, IoAddOutline } from "react-icons/io5";
 
 const MovieContent = () => {
     return (
@@ -14,7 +16,8 @@ const MovieContent = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, atque officiis. Sint consequuntur illum sed consectetur quasi assumenda rem possimus, distinctio illo blanditiis sapiente perspiciatis exercitationem reprehenderit quisquam quam asperiores.
             </p>
             <div className="button">
-                <a href="#" className="mainBtn">Button</a>
+                <Button icon={<IoBookmarkOutline />} name="Book" color="#ff3700" bgColor="#ffffff" />
+                <Button icon={<IoAddOutline />} name="My List" />
             </div>
         </div>
     )
