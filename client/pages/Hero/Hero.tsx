@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from 'react'
 import './Hero.scss'
 import axios from 'axios';
-import { IoPlayOutline } from "react-icons/io5";
 import MovieContent from '@/components/MovieContent';
 import MovieDate from '@/components/MovieDate';
+import MovieTrailer from '@/components/MovieTrailer';
 
 
 const Hero = () => {
@@ -38,11 +38,7 @@ const Hero = () => {
                         </div>
                         <div className="col-lg-6 col-mid-12">
                             <MovieDate />
-
-                            <div className="trailer d-flex align-items-center justify-content-center active">
-                                <a href="#" className="playBtn"><IoPlayOutline className='play-icon' /></a>
-                                <p>Watch Trailer</p>
-                            </div>
+                            <MovieTrailer />
                         </div>
                     </div>
                 </div>
