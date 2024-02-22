@@ -58,10 +58,23 @@
             height: 100%;
             background: transparent;
             border: 1px solid rgba(255,255,2555,0.5);
+            outline: none;
+            border-radius: 4px;
+            padding: 0 10px 0 45px;
+            backdrop-filter: blur(10px);
 
             &::placeholder{
                 color: var(--text);
             }
+        }
+        .search-icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            padding-right: 10px;
+            border-right: 1px solid var(--text);
+            font-size: 26px;
         }
     }
 }
