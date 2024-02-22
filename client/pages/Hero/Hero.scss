@@ -44,9 +44,24 @@
             opacity: 0;
             transition: 1s;
 
-            &:active{
-                visibility: visible;
-                opacity: 1;
+        
+        }
+        .bgImg.active{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .container-fluid{
+            .row{
+                .content{
+                    position: relative;
+                    max-width: 550px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: 1s;
+                    z-index: 1000;
+                }
             }
         }
     }
