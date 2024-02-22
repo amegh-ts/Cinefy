@@ -2,19 +2,31 @@ import React from 'react'
 import Button from './Button'
 import { IoBookmarkOutline, IoAddOutline } from "react-icons/io5";
 
-const MovieContent = () => {
+interface Movie {
+    titleImg: string;
+    year: string;
+    ageLimit: string;
+    length: string;
+    category: string;
+    description: string;
+    active?: boolean; // optional
+}
+
+interface MovieContentProps {
+    movie: Movie;
+}
+
+const MovieContent: React.FC<MovieContentProps> = ({ movie }) => {
     return (
-        <div className="content active">
-            <img src="/assets/movies/transformer-title.png" alt="Movie Title" className="movie-title" />
+        <div className={`content ${movie.active ? 'active' : undefined}`}>
+            <img src={movie.titleImg} alt="Movie Title" className="movie-title" />
             <h4>
-                <span>Year</span>
-                <span><i>age</i></span>
-                <span>length</span>
-                <span>category </span>
+                <span>{movie.year}</span>
+                <span><i>{movie.ageLimit}</i></span>
+                <span>{movie.length}</span>
+                <span>{movie.category} </span>
             </h4>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, atque officiis. Sint consequuntur illum sed consectetur quasi assumenda rem possimus, distinctio illo blanditiis sapiente perspiciatis exercitationem reprehenderit quisquam quam asperiores.
-            </p>
+            <p>{movie.description}</p>
             <div className="button">
                 <Button icon={<IoBookmarkOutline />} name="Book" color="#ff3700" bgColor="#ffffff" />
                 <Button icon={<IoAddOutline />} name="My List" />

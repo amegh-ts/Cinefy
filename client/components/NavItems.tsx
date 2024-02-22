@@ -1,6 +1,15 @@
 import React from 'react'
 
-const NavItems = ({ nav }) => {
+interface NavItem {
+    link: string;
+    name: string;
+}
+
+interface NavItemsProps {
+    nav: NavItem;
+}
+
+const NavItems: React.FC<NavItemsProps>  = ({ nav }) => {
     return (
         <li>
             <a href={nav.link}>{nav.name}</a>
