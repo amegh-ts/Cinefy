@@ -8,13 +8,15 @@ const PORT=5000
 app.use(cors())
 dotenv.config()
 
-
+const movieRoutes=require('./Routes/MovieRoutes')
 
 mongoose.connect(process.env.Mongo_Key).then(() => {
     console.log('Database Connected');
 })
 
 app.use(express.json())
+
+app.use('/', movieRoutes)
 
 
 app.listen(PORT, () => {
