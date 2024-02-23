@@ -9,7 +9,7 @@ interface Movie {
     length: string;
     category: string;
     description: string;
-    active?: boolean; // optional
+    active?: boolean;
 }
 
 interface MovieContentProps {
